@@ -129,17 +129,61 @@ console.log(deleteOne(c,d))  WORKS TOO */
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
+let dogString = "I wish I had 4 dogs"
+function onlyLetters(x) {
+    x = x.replace("4", "") // or ("4", " ")
+    return x
+}
+console.log(onlyLetters(dogString))
+
+/*
+let x = "I wish I had 4 dogs"
+function onlyLetters(x) {
+    x = x.replace("4", "") // or ("4", " ")
+    return x
+}
+console.log(onlyLetters(x)) WORKS TOO */
 
 
-
-/* Ex.6 
+/* Ex.6  DOESN'T WORK
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+let emailString = "email@pleasework.com"
+
+function isThisAnEmail(email) {
+    let mailFormat = "@"
+    if (email.value.match(mailformat)) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(isThisAnEmail(emailString))
+
+// let emailString = "email@pleasework.com"
+// function isThisAnEmail(y) {
+//     if (y.indexOf("@")) {
+//         return true
+//     } else {
+//         return false
+//     }    
+// }
+// console.log(isThisAnEmail(emailString))
 
 
-/* Ex.7
+/* Ex.7 DOESN'T WORK
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+function whatDayIsIt() {
+    today = new Date()
+    let day = today.getDate();
+    let month = today.getMonth() +1; //As January is 0.
+    let year = today.getFullYear();
+    return (day + " " + month + " " + year)
+}
+
+console.log(whatDayIsIt())
+
 
 
 /* Ex.8
@@ -152,6 +196,9 @@ console.log(deleteOne(c,d))  WORKS TOO */
         values: [3, 3, 4]
     }
 */
+function rollTheDice(n) {
+    
+}
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
