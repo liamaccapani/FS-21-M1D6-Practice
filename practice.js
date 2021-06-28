@@ -16,7 +16,22 @@ console.log(sum)
 
 /* Ex.C 
     Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
-*/
+Different ways to solve this ex */
+
+// First solution --> generates a random INTEGER number, but IT WILL NEVER RETURN 20 the range is 0-19
+let random = Math.floor(Math.random() * 20)
+console.log(random)
+
+//Second solution --> generates a random number between 0 and 20, INCLUDING 20, using a function
+let random2 = function(max) { // method for functions 1
+    return Math.floor((Math.random() * max) + 1)
+}
+
+
+function random3(max) {  //method for functions 2
+    return Math.floor((Math.random * max) + 1)
+}
+
 
 
 /* Ex.D
