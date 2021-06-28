@@ -18,18 +18,18 @@ console.log(sum)
     Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 Different ways to solve this ex */
 
-// First solution --> generates a random INTEGER number, but IT WILL NEVER RETURN 20 the range is 0-19
+// First solution --> generates a random INTEGER number, NOT INCLUDING 20 (range is 0-19)
 let random = Math.floor(Math.random() * 20)
 console.log(random)
 
 //Second solution --> generates a random number between 0 and 20, INCLUDING 20, using a function math.floor is for integers!!
-let random2 = Math.floor((Math.random() * 20) + 1)
+let random2 = Math.floor((Math.random() * 20) + 1) 
+//YO((give me a random number * from 0 to 19) + 1 cuz i want to include 20 as well)
 console.log(random2)
 
 
 /* Ex.D
-    Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
-*/
+    Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age. */
 let me ={
     name: "Lia",
     surname: "Maccapani",
@@ -38,9 +38,7 @@ let me ={
 console.log(me)
 
 
-/* Ex.E 
-    Programmatically remove the age property from the previously create object.
-*/
+/* Ex.E Programmatically remove the age property from the previously create object. */   
 delete me.age
 console.log(me)
 
@@ -57,18 +55,29 @@ delete me.skills.pop()
 console.log(me)
 
 // delete me.skills[2]
-// console.log(me) --> it doesn't remove it properly, in the console log appear an "empty intem"
+// console.log(me) --> it doesn't remove it properly, in the console is logged as an "empty intem"
+
 
 
 // JS Functions
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
-
+function dice(min, max) {
+    return Math.floor(Math.random() * 6) + 1 // +1 so it's not 0
+    //Mind the () its different from ex C
+}
+console.log(dice(1, 6))
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
+function whoIsBigger(a, b) {
+    if (a > b) {
+        return a
+    }
+}
+console.log(whoIsBigger(9, 5))
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
