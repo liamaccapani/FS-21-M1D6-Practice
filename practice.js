@@ -22,15 +22,9 @@ Different ways to solve this ex */
 let random = Math.floor(Math.random() * 20)
 console.log(random)
 
-//Second solution --> generates a random number between 0 and 20, INCLUDING 20, using a function
-let random2 = function(max) { // method for functions 1
-    return Math.floor((Math.random() * max) + 1)
-}
-
-
-function random3(max) {  //method for functions 2
-    return Math.floor((Math.random * max) + 1)
-}
+//Second solution --> generates a random number between 0 and 20, INCLUDING 20, using a function math.floor is for integers!!
+let random2 = Math.floor((Math.random() * 20) + 1)
+console.log(random2)
 
 
 /* Ex.D
@@ -70,6 +64,7 @@ console.log(me)
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
+
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
