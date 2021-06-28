@@ -83,23 +83,46 @@ console.log(whoIsBigger(9, 5))
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
+let a = "Please do the thing"
+function splitMe(a) {
+    let array = ["Please", "do", "the", "thing"]
+    return array
+}
+console.log(splitMe())
+//what if i wanted to create a less specific function?
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+let myString = "String"
+            //  012345
+let booleanValue = true
+
+function deleteOne(c, d) {
+    if (d === true){         //tring
+        c = c.slice(1)
+    } else {                 //Strin
+        c = c.slice(0, -1)
+    }
+    return c 
+}
+console.log(deleteOne(myString,booleanValue))
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
+
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
+
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
