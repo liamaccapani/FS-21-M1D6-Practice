@@ -75,6 +75,8 @@ console.log(dice(1, 6))
 function whoIsBigger(a, b) {
     if (a > b) {
         return a
+    } else {
+        return b
     }
 }
 console.log(whoIsBigger(9, 5))
@@ -85,11 +87,10 @@ console.log(whoIsBigger(9, 5))
 */
 let a = "Please do the thing"
 function splitMe(a) {
-    let array = ["Please", "do", "the", "thing"]
-    return array
+    return a.split(' ') //it was hard coded! 
+
 }
 console.log(splitMe())
-//what if i wanted to create a less specific function?
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
@@ -129,7 +130,7 @@ console.log(deleteOne(c,d))  WORKS TOO */
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
-let dogString = "I wish I had 4 dogs"
+let dogString = "I wish I had 4 dogs" // hard coded! what if i have another number? --> use a for loop that checks if it's a number then cut, otherwise skip
 function onlyLetters(x) {
     x = x.replace("4", "") // or ("4", " ")
     return x
@@ -148,6 +149,14 @@ console.log(onlyLetters(x)) WORKS TOO */
 /* Ex.6  DOESN'T WORK
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+// function isThisAnEmail(str) {  //Justas code
+//     let email = str.toLowerCase();
+//     // check if email contains @
+//     if(email.indexOf("@")==-1){
+//         return false
+//     }
+//     // split email into 2 parts
+//     let emailArr = email.split('@')
 let emailString = "email@pleasework.com"
 
 function isThisAnEmail(email) {
