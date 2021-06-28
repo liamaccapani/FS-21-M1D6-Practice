@@ -108,10 +108,28 @@ function deleteOne(c, d) {
 }
 console.log(deleteOne(myString,booleanValue))
 
+/*
+let c = "String"
+     //  012345
+let d = true
+
+function deleteOne(c, d) {
+    if (d === true){         //tring
+        c = c.slice(1)
+    } else {                 //Strin
+        c = c.slice(0, -1)
+    }
+    return c 
+}
+console.log(deleteOne(c,d))  WORKS TOO */
+
+
+
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
+
 
 
 /* Ex.6 
