@@ -85,12 +85,14 @@ console.log(whoIsBigger(9, 5))
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
-let a = "Please do the thing"
-function splitMe(a) {
-    return a.split(' ') //it was hard coded! 
+function splitMe(string) {
+    return string.split(' ') //it was hard coded! 
 
 }
-console.log(splitMe())
+// let a = "Please do the thing"
+// console.log(splitMe(a))
+
+console.log(splitMe('Please do the thing'))
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
@@ -130,38 +132,39 @@ console.log(deleteOne(c,d))  WORKS TOO */
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
-let dogString = "I wish I had 4 dogs" // hard coded! what if i have another number? --> use a for loop that checks if it's a number then cut, otherwise skip
-function onlyLetters(x) {
-    x = x.replace("4", "") // or ("4", " ")
-    return x
+// let dogString = "I wish I had 4 dogs"
+// function onlyLetters(x) {
+//     x = x.replace("4", "") // hard coded! what if i have another number? --> use a for loop that checks if it's a number then cut, otherwise skip
+//     return x
+// }
+//console.log(onlyLetters(dogString))
+
+let onlyLetters = function(string){
+    let checkedString = ''
+    for (let currentLetter of string){
+        if (isNaN(currentLetter)){
+            checkedString += currentLetter
+        }
+    }
+    return checkedString
 }
-console.log(onlyLetters(dogString))
+console.log(onlyLetters('I wish I had 4 dogs')) //output: IwishIhaddogs
 
-/*
-let x = "I wish I had 4 dogs"
-function onlyLetters(x) {
-    x = x.replace("4", "") // or ("4", " ")
-    return x
-}
-console.log(onlyLetters(x)) WORKS TOO */
+// function onlyLetters(string) {
+//     let noNumString = string.replace(/[0-9]/g, "") 
+//     return noNumString
+//   }
+// console.log(onlyLetters('I wish I had 4 dogs')) //output: I wish I had  dogs
 
 
-/* Ex.6  DOESN'T WORK
+/* Ex.6
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
-// function isThisAnEmail(str) {  //Justas code
-//     let email = str.toLowerCase();
-//     // check if email contains @
-//     if(email.indexOf("@")==-1){
-//         return false
-//     }
-//     // split email into 2 parts
-//     let emailArr = email.split('@')
 let emailString = "email@pleasework.com"
 
-function isThisAnEmail(email) {
+function isThisAnEmail(string) {
     let mailFormat = "@"
-    if (email.value.match(mailformat)) {
+    if (string.value.match(mailFormat)) {
         return true
     } else {
         return false
