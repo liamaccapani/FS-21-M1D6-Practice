@@ -160,30 +160,29 @@ console.log(onlyLetters('I wish I had 4 dogs')) //output: IwishIhaddogs
 /* Ex.6
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
-let emailString = "email@pleasework.com"
 
-function isThisAnEmail(string) {
-    let mailFormat = "@"
-    if (string.value.match(mailFormat)) {
+let isThisAnEmail = function(string){
+    if(string.includes('@') && string.includes('.')){
         return true
     } else {
         return false
     }
 }
-console.log(isThisAnEmail(emailString))
+console.log(isThisAnEmail('captain.findus'))
+console.log(isThisAnEmail('captainfindus@'))
+console.log(isThisAnEmail('captain.findus@email.com'))
 
-// let emailString = "email@pleasework.com"
-// function isThisAnEmail(y) {
-//     if (y.indexOf("@")) {
-//         return true
-//     } else {
-//         return false
-//     }    
+//Method 2
+// const isThisAnEmail = function(string){
+//     let realEmail = /\S+@\S+\.\S+/
+//     return realEmail.test(string)
 // }
-// console.log(isThisAnEmail(emailString))
+// console.log(isThisAnEmail('captain.findus'))
+// console.log(isThisAnEmail('captain.findus@email.com'))
 
 
-/* Ex.7 DOESN'T WORK
+
+/* Ex.7 
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 function whatDayIsIt() {
