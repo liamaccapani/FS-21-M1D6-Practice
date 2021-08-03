@@ -1,4 +1,7 @@
 //JS Basics
+const newExercise = function(x){
+    console.log(`-------- Exercise ${x} --------`)
+}
 
 /* Ex.A
    Create a variable called "test" and assign a string to it.
@@ -58,16 +61,16 @@ console.log(me)
 // console.log(me) --> it doesn't remove it properly, in the console is logged as an "empty intem"
 
 
-
+console.log('JS Functions')
 // JS Functions
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
-function dice(min, max) {
+function dice() {
     return Math.floor(Math.random() * 6) + 1 // +1 so it's not 0
     //Mind the () its different from ex C
 }
-console.log(dice(1, 6))
+console.log(dice())
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
@@ -101,13 +104,13 @@ let myString = "String"
             //  012345
 let booleanValue = true
 
-function deleteOne(c, d) {
-    if (d === true){         //tring
-        c = c.slice(1)
+function deleteOne(str, boolean) {
+    if (boolean === true){         //tring
+        str = str.slice(1)
     } else {                 //Strin
-        c = c.slice(0, -1)
+        str = str.slice(0, -1)
     }
-    return c 
+    return str 
 }
 console.log(deleteOne(myString,booleanValue))
 
@@ -190,11 +193,10 @@ function whatDayIsIt() {
     let day = today.getDate();
     let month = today.getMonth() +1; //As January is 0.
     let year = today.getFullYear();
-    return (day + " " + month + " " + year)
+    return (day + "/" + month + "/" + year)
 }
 
 console.log(whatDayIsIt())
-
 
 
 /* Ex.8
@@ -207,9 +209,18 @@ console.log(whatDayIsIt())
         values: [3, 3, 4]
     }
 */
-function rollTheDice(n) {
-    
+const rollTheDices = function(num){
+    let newObj = {sum: 0, values: []}
+    for(i=0; i<num; i++) {
+        let diceNumber = dice()
+        newObj.sum += diceNumber
+        newObj.values.push(diceNumber)
+    }
+    return newObj
 }
+
+console.log(rollTheDices(3))
+
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
